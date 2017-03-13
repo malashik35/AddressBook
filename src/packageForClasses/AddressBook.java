@@ -14,19 +14,19 @@ public class AddressBook {
     }
 
     //метод добавления нового человека в записную книгу
-    public void addNewRecord(final String name, final String street, final int house, final int flat) {
+    public void addNewRecord(String name, String street, int house, int flat) {
         personAddress.put(name, new Address(street, house, flat));
         //доабвляем запись фамилия - адрес, создавая новый эземпляр класса Address
         // (для этого вызываем конструктор класса Address, передавая ему эти значения полей
     }
 
     //метод удаления человека
-    public void removePerson(final String name) {
+    public void removePerson(String name) {
         personAddress.remove(name);
     }
 
     //изменение адреса человека
-    public void changeRecord(final String name, final String newStreet, final int newHouse, final int newFlat) {
+    public void changeRecord(String name, String newStreet, int newHouse, int newFlat) {
         Address address = personAddress.get(name);
         address.street = newStreet;
         address.house = newHouse;
@@ -35,12 +35,12 @@ public class AddressBook {
 
     //получение адреса человека
     //если такого человека нет, вернёт null
-    public Address getAddress(final String name) {
+    public Address getAddress(String name) {
         return personAddress.get(name);
     }
 
     //получение списка людей, живущих на заданной улице
-    public List<String> getPeopleByStreet(final String street) {
+    public List<String> getPeopleByStreet(String street) {
         //пустой список людей
         List<String> people = new ArrayList<>();
 
@@ -54,7 +54,7 @@ public class AddressBook {
     }
 
     //получение списка людей, живущих в заданном доме
-    public List<String> getPeopleByHouse(final String street, final int house) {
+    public List<String> getPeopleByHouse(String street, int house) {
         //пустой список людей
         List<String> people = new ArrayList<>();
         //entrySet - содержимое адресной книги

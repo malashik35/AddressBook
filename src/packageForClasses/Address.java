@@ -7,7 +7,7 @@ public class Address {
     int flat;
 
     //конструктор - заполнение полей при создании экземпляра объекта
-    public Address(final String street, final int house, final int flat) {
+    public Address(String street, int house, int flat) {
         this.street = street;
         this.house = house;
         this.flat = flat;
