@@ -25,7 +25,6 @@ public class AddressBook {
         personAddress.remove(name);
     }
 
-
     //изменение адреса человека
     public void changeRecord(final String name, final String newStreet, final int newHouse, final int newFlat) {
         Address address = personAddress.get(name);
